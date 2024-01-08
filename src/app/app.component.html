@@ -1,0 +1,39 @@
+<form class="ui large form segment">
+  <h3 class="ui header">Input two numbers and select an operation</h3>
+
+  <div class="field">
+    <label for="firstNumber">First number:</label>
+    <input name="firstNumber" type="number" id="firstNumber" #firstOperand>
+  </div>
+  <div class="field">
+    <label for="secondNumber">Second number:</label>
+    <input name="secondNumber" type="number" id="secondNumber" #secondOperand>
+  </div>
+
+  <button (click)="add(firstOperand, secondOperand)"
+          class="ui positive right floated button">
+    Add
+  </button>
+    <button (click)="subtract(firstOperand, secondOperand)"
+          class="ui positive right floated button">
+    Subtract
+  </button>
+  <button (click)="multiply(firstOperand, secondOperand)"
+          class="ui positive right floated button">
+    Multiply
+  </button>
+  <button (click)="divide(firstOperand, secondOperand)"
+          class="ui positive right floated button">
+    Divide
+  </button>
+
+</form>
+
+<div class="four wide column center aligned result">
+	<div class="ui statistic">
+		<div class="value">
+			{{result}}
+		</div>
+	
+	</div>
+</div>
